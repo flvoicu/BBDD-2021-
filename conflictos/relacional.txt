@@ -1,0 +1,32 @@
+Conflicto(idConflicto, nombre, nºHeridos, pais, nºMuertos, idGrupArmd, idOrgMediad)
+		PK						FK	    FK
+Economicos(idConflicto, materiPrimAfect)
+		PK
+Raciales(idConflicto, etniaEnfrentç)
+		PK
+Religiosos(idConflictos, religionAfect)
+		                    PK
+Territorioales(idConflicto, regionAfect)
+		   PK
+OrgMediadoras(idOrgMediad, nºPers, orgDepend, nombre)
+		   PK
+AyudaOrg(idAyuda, diplomatica, medica, presencial, idOrgMediad)
+	 PK					     FK
+TipoOrg(idTipo, gubernamental, noGubernamental, internacional, idOrgMediad)
+	  PK							    FK
+GrupoArmado(idGrupo, nombre, bajasTotales)
+		PK
+Divisiones(nºDivision, nºBarcos, nºTanques, nºAviones, nºBajas, nºHombres, idGrupo, idJefe)
+		PK							       FK      FK
+JefeMilitar(idJefe, rango, apodoLider)
+		PK	     FK
+LiderPolitico(apodoLider, nombre, idGrupo)
+		  PK		     FK	
+Dialoga(idDialogo, dialogo, apodoLider, idOrgMediad)
+	   PK			FK	     FK
+Arma(nombre, capDestruc, idGrupo, idTraficante)
+	PK		     FK		FK
+VentaArmas(idVentaArma, cantArma, idTraficante)
+		PK			FK
+CompraArmas(idCompraArma, cantArma, idGrupo)
+		PK			FK

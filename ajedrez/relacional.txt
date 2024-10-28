@@ -1,0 +1,24 @@
+Pais(idPais, nombre, nºClubs)
+      PK         
+Participantes(nºAsociado, nombre, direccion, telefono, campParticip, idPais)
+                PK 							FK
+Arbitro(nºAsociado)
+	    PK
+Jugador(nºAsociado, nivel)
+	    PK
+Partida(codPartida, jornadan,nºAsociado,idSala)
+	    PK			  FK	   FK	
+JuegaNegras(idNegras, codPart, nºAsociado)
+		PK	FK	   FK
+JuegaBlancas(idBlancas, codPart, nºAsociado)
+		PK	FK	   FK
+Movimientos(idMovimiento, cometario, jugadas, codPartida)
+		PK				  FK
+Hotel(idHotel, nombre, direccion, telefono)
+	FK
+seAloja(idSeAlojan,nºAsociado, idHotel, f_Inic, f_Fin)
+	   PK		FK	  FK	
+Salas(idSala,idHotel, capacidad, medios)
+	PK	FK
+SeCelebra(idSeCelebra, nºEntradasVendidas, idSala, codPartida)
+		pk			      FK 	FK

@@ -1,0 +1,40 @@
+ProdElectrica(nombre, prodMedia, prodMax, f_Entrada)
+		PK
+EstacionesPrim(idEstacion, nombre, nºTransformad)
+		   PK
+EntregaEnergia(idEntregaEnenegia, prodTotal, cantidad, nombre, idEstacion)
+			PK				 FK   	    FK
+RedDistribucion(nºRed)
+		  PK
+EnvioEnergia(idEnvio, nºRedEnvio, nºRedRecepcion, volumeEnergia)
+		PK	   FK		FK
+CompaniaElectrica(idCompania, nombre)
+			PK
+TieneCompElectrica(idTieneCompElect, nºRed, idComp)
+			PK		FK   FK
+Linea(nºSecuencial, longitud, nºRed)
+	   PK			FK
+SubEstacion(idEstacion, nºSecuencial)
+		PK	     FK
+ZonasServicio(idZona, consumoMedio, nºConsumidoresFinales, codProvincias)
+		PK						FK
+CategoriasDistribucion(idCategorias, particulares, empresa, instituciones,  idZona, idEstacion)
+			    PK							FK	FK
+Provincias(codProvincia, nombre)
+		PK
+CentralTermica(nombre, nºHoras, volumenCarbonConsumido, volumenEmisionGas)
+		PK
+CentralHidroelectrica(nombre, ocupacion, capMax, nºTurbinas)
+			PK
+CentralSolar(nombre, superficiePanelesSolar, mediaHorasSolAnual)
+		PK
+TipoCentSolar(idTipoSol, fotovolcanica, termodinamica, nombreSol)
+		  PK					   FK
+CentralNuclear(nombre, nºReactores, volumenPlutonioConsumido, residuosNucleares)
+		PK
+Suministrador(idSuministrador, nombre, pais)
+		 PK
+Transportista(matricula, nombre)
+		  PK
+CompraVentaPlutonio(idCompraVenta, registro, idSuministrador, idTransportista, nombreNuclear)
+			PK			    FK			FK	     FK

@@ -1,0 +1,48 @@
+ParqueNatural(nombreParque, fecha)
+		PK
+Visitantes(DNI, nombre, domicilio, profesion, nomParque,idAlojamiento)
+	    PK					FK		FK
+Alojamiento(idAlojamiento, capacidad, categorias, nombreParque)
+		  PK					FK
+Excursiones(idExcursion, idAlojamiento)
+		PK		FK
+TipoExcursiones(idTipoExcurs, pie, vehiculo, idExcursiones)
+			PK			   FK
+OrganizaExcursion(idOrganizaExcurs, fecha, dias, hora, idExcursiones)
+			PK					FK
+CA(idCA, nombre, nºParques)
+    PK
+CAtieneParque(idTiene, superficie, idCA, nombreParque)
+		PK		      FK	FK
+Personal(nºSegSoci, direccion, nombre, nombreParque)
+	    PK					FK
+TipoTelefono(idTipoTel, domicilio, movil, nºSegSoci)
+		PK				FK
+Investigador(nºSegSoci, titulacion, proyInvestiacion)
+		PK			
+Gestion(nºSegSoci, nºEntrada)
+	   PK
+Conservacion(nºSegSoci,extension)
+		PK	  FK
+Vigilancia(nºSegSoci, extension)
+		PK	FK
+Vehiculo(matricula, tipo, nºSegSoci)
+		PK            FK
+Area(extension, nombre)
+	PK
+Especies(nombreCientifico, nombreVulgar, extension)
+		PK				FK
+ComenTipo(idComen, vegetales, animales, nombreCientifico)
+	     PK					FK
+Minerales(nombreCientifico, cristales, rocas)
+		PK
+Animales(nombreCientifico, peridoCelo)
+		PK
+AlimentacionAnimales(idAlimentacion, hervibora, carnibora, omnivora, nombreCientifico)
+			PK						   FK
+Vegetales(nombreCientifico, floracion, periodoFloracion)
+		PK
+	
+
+
+
